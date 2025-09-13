@@ -30,7 +30,7 @@ Unlike the Flask web version, this runs directly in your **terminal/command prom
 ├── token.pickle # Auto-created after login (stores your session)
 
 yaml
-Copy code
+
 
 ---
 
@@ -44,14 +44,14 @@ cd youtube-private-updater-cli
 Create a virtual environment (optional, recommended):
 
 bash
-Copy code
+
 python -m venv venv
 source venv/bin/activate    # Mac/Linux
 venv\Scripts\activate       # Windows
 Install dependencies:
 
 bash
-Copy code
+
 pip install google-api-python-client google-auth google-auth-oauthlib
 (Or add them in requirements.txt and run pip install -r requirements.txt)
 
@@ -76,7 +76,7 @@ Rename it to client_secret.json and place it in this folder
 Run the script:
 
 bash
-Copy code
+
 python updater.py
 On first run, a browser window will open for Google login.
 
@@ -97,7 +97,7 @@ Show progress in the terminal
 Example output:
 
 vbnet
-Copy code
+
 ✅ Connected to YouTube API
 📂 Uploads Playlist ID: UUabc123xyz
 📄 Fetching page 1 of uploads...
@@ -112,13 +112,13 @@ Default daily update limit: 200 videos
 You can change this by editing the constant in the script:
 
 python
-Copy code
+
 DAILY_LIMIT = 200
 🧹 Resetting Login
 To re-authenticate with Google, delete token.pickle:
 
 bash
-Copy code
+
 rm token.pickle
 Next time you run the script, it will ask you to log in again.
 
